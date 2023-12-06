@@ -1,0 +1,106 @@
+import java.util.*;
+import java.text.SimpleDateFormat;
+
+class User {
+    String email;
+    String password;
+
+    User(String email, String password) {
+        this.email = email;
+        this.password = password;
+    }
+}
+
+class CalendarEvent {
+    String title;
+    Date startDate;
+    Date endDate;
+
+    CalendarEvent(String title, Date startDate, Date endDate) {
+        this.title = title;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+}
+
+class Course {
+    int courseId;
+    String courseName;
+    String instructor;
+    Date startDate;
+    Date endDate;
+
+    Course(int courseId, String courseName, String instructor, Date startDate, Date endDate) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.instructor = instructor;
+        this.startDate = startDate;
+        this.endDate = endDate;
+    }
+}
+
+class Task {
+    int taskId;
+    String taskName;
+    Date dueDate;
+    int courseId;
+
+    Task(int taskId, String taskName, Date dueDate, int courseId) {
+        this.taskId = taskId;
+        this.taskName = taskName;
+        this.dueDate = dueDate;
+        this.courseId = courseId;
+    }
+}
+
+class AcademicAgendaApp {
+    List<User> users = new ArrayList<>();
+    List<Course> courses = new ArrayList<>();
+    List<Task> tasks = new ArrayList<>();
+    List<CalendarEvent> calendarEvents = new ArrayList<>();
+
+    // Additional functionality for User Authentication and Authorization
+    public void resetPassword(String email) {
+        // Implement password reset logic here
+        System.out.println("Password reset email sent to: " + email);
+    }
+
+    // Additional functionality for Academic Calendar
+    public void editCalendarEvent(String title, Date startDate, Date endDate) {
+        // Implement edit calendar event logic here
+        System.out.println("Calendar event edited successfully.");
+    }
+
+    // Additional functionality for Grade Tracking
+    public double calculateCumulativeGPA() {
+        // Implement GPA calculation logic here
+        double cumulativeGPA = 3.5; // Placeholder value, actual calculation needed
+        return cumulativeGPA;
+    }
+
+    // Additional functionality for Task Scheduler
+    public void editTask(int taskId, String taskName, Date dueDate, int courseId) {
+        // Implement edit task logic here
+        System.out.println("Task edited successfully.");
+    }
+
+    public static void main(String[] args) {
+        AcademicAgendaApp academicAgendaApp = new AcademicAgendaApp();
+
+        // Example usage:
+        academicAgendaApp.registerUser("user@example.com", "password123");
+        academicAgendaApp.loginUser("user@example.com", "password123");
+        academicAgendaApp.resetPassword("user@example.com");
+
+        academicAgendaApp.addCourse(101, "Software Engineering", "Prof. Jones", new Date(), new Date());
+        academicAgendaApp.addTask(1, "Research Paper", new Date(), 101);
+
+        academicAgendaApp.addCalendarEvent("Exam", new Date(), new Date());
+        academicAgendaApp.editCalendarEvent("Exam", new Date(), new Date());
+
+        double cumulativeGPA = academicAgendaApp.calculateCumulativeGPA();
+        System.out.println("Cumulative GPA: " + cumulativeGPA);
+
+        academicAgendaApp.editTask(1, "Updated Research Paper", new Date(), 101);
+    }
+}
