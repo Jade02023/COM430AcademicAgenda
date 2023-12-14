@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import java.sql.Date;
 import java.util.ArrayList;
 import java.util.List;
-
+//Adding events to the calendar
 public class AcademicCalendar {
     private final List<CalendarEvent> events;
 
@@ -61,7 +61,7 @@ public class AcademicCalendar {
         public void setEndDate(Date endDate) {
             this.endDate = endDate;
         }
-
+//Naming calendar events
         @NonNull
         @Override
         public String toString() {
