@@ -26,15 +26,14 @@ public class PasswordRecoveryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_password_recovery); // Create a layout file named "activity_password_recovery.xml"
 
         // Initialize UI elements
-        emailEditText = findViewById(R.id.editTextEmail); // Assuming you have an EditText with id "editTextEmail" in your layout
-        recoverPasswordButton = findViewById(R.id.buttonRecoverPassword); // Assuming you have a Button with id "buttonRecoverPassword" in your layout
+        emailEditText = findViewById(R.id.editTextEmail); //Button with id "editTextEmail"
+        recoverPasswordButton = findViewById(R.id.buttonRecoverPassword); // Button with id "buttonRecoverPassword" 
 
         // Set click listener for the recover password button
         recoverPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle password recovery logic here
-
+    
 
             }
         });
@@ -60,7 +59,7 @@ public class PasswordRecoveryActivity extends AppCompatActivity {
         binding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Recover Password", Snackbar.LENGTH_LONG)
                         .setAnchorView(R.id.fab)
                         .setAction("Action", null).show();
             }
