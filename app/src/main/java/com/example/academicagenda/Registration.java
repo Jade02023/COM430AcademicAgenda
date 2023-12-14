@@ -27,11 +27,11 @@ public class Registration extends AppCompatActivity {
             setContentView(R.layout.activity_registration); // Assuming you have a layout file named "activity_registration.xml"
 
             // Initialize UI elements
-            usernameEditText = findViewById(R.id.editTextUsername); // Assuming you have an EditText with id "editTextUsername" in your layout
-            passwordEditText = findViewById(R.id.editTextPassword); // Assuming you have an EditText with id "editTextPassword" in your layout
-            securityQuestionSpinner = findViewById(R.id.spinnerSecurityQuestion); // Assuming you have a Spinner with id "spinnerSecurityQuestion" in your layout
-            securityAnswerEditText = findViewById(R.id.editTextSecurityAnswer); // Assuming you have an EditText with id "editTextSecurityAnswer" in your layout
-            Button registerButton = findViewById(R.id.buttonRegister); // Assuming you have a Button with id "buttonRegister" in your layout
+            usernameEditText = findViewById(R.id.editTextUsername); //  EditText with id "editTextUsername" 
+            passwordEditText = findViewById(R.id.editTextPassword); // EditText with id "editTextPassword" 
+            securityQuestionSpinner = findViewById(R.id.spinnerSecurityQuestion); // Spinner with id "spinnerSecurityQuestion"
+            securityAnswerEditText = findViewById(R.id.editTextSecurityAnswer); // EditText with id "editTextSecurityAnswer" 
+            Button registerButton = findViewById(R.id.buttonRegister); // Button with id "buttonRegister"
 
             // Set up the security question spinner with sample questions
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
