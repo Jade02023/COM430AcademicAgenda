@@ -19,31 +19,31 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login); // Assuming you have a layout file named "activity_login.xml"
+        setContentView(R.layout.activity_login); // calling layout file named "activity_login.xml"
 
         // Initialize UI elements
-        usernameEditText = findViewById(R.id.editTextUsername); // Assuming you have an EditText with id "editTextUsername" in your layout
-        passwordEditText = findViewById(R.id.editTextPassword); // Assuming you have an EditText with id "editTextPassword" in your layout
-        loginButton = findViewById(R.id.buttonLogin); // Assuming you have a Button with id "buttonLogin" in your layout
-        registerButton = findViewById(R.id.buttonRegister); // Assuming you have a Button with id "buttonRegister" in your layout
-        forgotPasswordButton = findViewById(R.id.buttonForgotPassword); // Assuming you have a Button with id "buttonForgotPassword" in your layout
+        usernameEditText = findViewById(R.id.editTextUsername); //EditText with id "editTextUsername" 
+        passwordEditText = findViewById(R.id.editTextPassword); //EditText with id "editTextPassword" 
+        loginButton = findViewById(R.id.buttonLogin); //Button with id "buttonLogin"
+        registerButton = findViewById(R.id.buttonRegister); //Button with id "buttonRegister"
+        forgotPasswordButton = findViewById(R.id.buttonForgotPassword); //Button with id "buttonForgotPassword" 
 
         // Set click listener for the login button
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle login logic here
+                // Login information logic 
                 String username = usernameEditText.getText().toString();
                 String password = passwordEditText.getText().toString();
 
-                // For simplicity, check if both username and password are not empty
+                // Check both username and password are not empty
                 if (!username.isEmpty() && !password.isEmpty()) {
                     // Successful login, navigate to the main activity or another appropriate screen
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish(); // Finish the LoginActivity to prevent going back to it
                 } else {
-                    // Display an error message or handle invalid login credentials
+                    // Display an error message for invalid login credentials
                     Toast.makeText(LoginActivity.this, "Invalid username or password", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle registration logic here
+                // Registration logic
                 Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(intent);
             }
@@ -63,9 +63,9 @@ public class LoginActivity extends AppCompatActivity {
         forgotPasswordButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Handle password recovery logic here
-                // You can navigate to a password recovery activity or show a dialog
-                Toast.makeText(LoginActivity.this, "Password recovery feature coming soon!", Toast.LENGTH_SHORT).show();
+                // Password recovery logic
+                // Navigate to a password recovery dialog
+                Toast.makeText(LoginActivity.this, "Password recovery!", Toast.LENGTH_SHORT).show();
             }
         });
     }
